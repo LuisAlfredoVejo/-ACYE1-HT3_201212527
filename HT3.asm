@@ -8,12 +8,12 @@ endm
 print macro buffer  ;imprime cadena de texto
     mov ax, @data
     mov ds, ax
-    mov ah, 09h     ;Número de función para print buffer en pantalla
-    mov dx, offset buffer   ;equivale a que lea dx, buffer, inicializa en dx la posición donde comienza la cadena
+    mov ah, 09h     
+    mov dx, offset buffer   
     int 21h
 endm
 
-clear macro 
+clear macro ;limpia
     mov ah, 00h
 	mov al, 03h
 	int 10h
