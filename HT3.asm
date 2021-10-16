@@ -77,7 +77,7 @@ main proc far
     mov bh, 0
     int 10h
 
-;---------------------------Hora-----------------------
+;---------------------------Fecha-----------------------
 
     mov ah, 2AH ;interrupcion para la fecha del sistema
     int 21h
@@ -138,7 +138,7 @@ main proc far
     envioChar n4
 
     envioChar '-'
-;-------------------------Fecha-----------------------------------------
+;-------------------------Hora-----------------------------------------
 
     mov ah, 2ch ;interrupcion para la hora del sistema
     int 21h
